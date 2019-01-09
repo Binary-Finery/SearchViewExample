@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">Search View Example</string>
     <string name="action_settings">Settings</string>
-    <string name="search_view_hint">search titles...</string>
+    <string name="search_view_hint">search…</string>
 </resources>
