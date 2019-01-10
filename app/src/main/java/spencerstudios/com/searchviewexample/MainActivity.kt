@@ -11,8 +11,8 @@ import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
-    private val dataList: ArrayList<String> = ArrayList()
-    private val filteredList: ArrayList<String> = ArrayList()
+    private val dataList  = mutableListOf<String>()
+    private val filteredList = mutableListOf<String>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,6 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
 
-        val menuInflater = menuInflater
         menuInflater.inflate(R.menu.menu_main, menu)
         val searchView = menu.findItem(R.id.action_search).actionView as SearchView
         searchView.queryHint = getString(R.string.search_view_hint)
